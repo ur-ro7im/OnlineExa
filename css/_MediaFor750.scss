@@ -1,0 +1,7 @@
+@mixin MediaFor750ForContent() {
+  @media (max-width: 1110px) {
+    .container .body-content .content {
+      width: 90%;
+    }
+  }
+}

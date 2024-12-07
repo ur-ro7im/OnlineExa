@@ -1,0 +1,21 @@
+%displayFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%displayGrid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 2fr;
+}
+%StylePhontForHeader {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+@mixin backgroundimage($path) {
+  background-image: url($path);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}

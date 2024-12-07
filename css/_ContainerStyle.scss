@@ -1,0 +1,146 @@
+@import "BodyContentStyle";
+@import "Function";
+@import "contentStyle";
+@import "MediaFor750";
+@import "Variabels";
+.container {
+  width: $width100;
+  height: $height100;
+  background-color: $background-color;
+  @extend %displayFlex;
+  .body-content {
+    position: relative;
+    @extend %Body-content;
+    @extend %displayFlex;
+    .content {
+      width: $width80;
+      height: $height80;
+      box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.267);
+      border-radius: $borderRadius;
+      overflow: hidden;
+      background-color: rgba(0, 255, 255, 0.03);
+      @extend %displayGrid;
+      @extend %contentStyle;
+      .header {
+        width: $width100;
+        @include backgroundimage("../Imgs/photoheader.jpeg");
+        .slidBlack {
+          width: $width100;
+          height: $height100Felmeya;
+          background-color: $background-colorBlack;
+          @extend %displayFlex;
+          p {
+            @extend %StylePhontForHeader;
+          }
+        }
+      }
+      .form {
+        height: $height100Felmeya;
+        form {
+          margin: auto;
+          flex-direction: column;
+          width: $width90;
+          height: $height100Felmeya;
+          @extend %displayFlex;
+
+          div {
+            position: relative;
+            margin: 10px 0;
+            @extend %displayFlex;
+            width: $width100;
+            @extend %displayFlex;
+
+            i {
+              cursor: pointer;
+              position: absolute;
+              right: 20px;
+              display: none;
+            }
+            label {
+              display: inline-block;
+              color: $background-colorBlack;
+              font-size: 20px;
+              font-weight: 600;
+              width: $width150px;
+            }
+            input,
+            select {
+              font-size: 16px;
+              font-weight: 600;
+              padding: 8px;
+              border: none;
+              outline: none;
+              width: $width100;
+              border-bottom: solid 2px #3cc56c;
+              background-color: rgba(187, 211, 255, 0.425);
+            }
+          }
+          .btn {
+            @extend %displayFlex;
+            gap: 10px;
+            a {
+              text-decoration: none;
+              font-weight: 600;
+              width: 150px;
+              color: rgb(255, 255, 255);
+              text-align: center;
+              padding: 10px;
+              border-radius: $borderRadius;
+              text-transform: capitalize;
+              transition: background-color 0.2s linear;
+              &.SignIn {
+                background-color: #76c893;
+                &:hover {
+                  background-color: #3cc56c;
+                }
+              }
+              &.SignUp {
+                background-color: #1e6091;
+                &:hover {
+                  background-color: #044f88;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include MediaFor750ForContent();
+@media (max-width: 550px) {
+  .container .body-content .content .form form .email,
+  .container .body-content .content .form form .password,
+  .container .body-content .content .form form .name,
+  .container .body-content .content .form form .role {
+    margin: 5px;
+    flex-direction: column;
+    i {
+      bottom: 10px;
+      right: 10px;
+    }
+    label {
+      align-self: self-start;
+      width: 100px;
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+  }
+  .container .body-content .content .form form {
+    div {
+      &.btn {
+        flex-direction: column;
+        gap: 5px;
+      }
+      input,
+      select {
+        padding: 3px;
+      }
+      .SignIn,
+      .SignUp {
+        width: 100px;
+        padding: 5px;
+      }
+    }
+  }
+}

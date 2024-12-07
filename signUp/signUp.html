@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <title>SignUp</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="body-content">
+        <div class="content">
+          <div class="header">
+            <div class="slidBlack">
+              <p class="txt-header">SignUp</p>
+            </div>
+          </div>
+          <div class="form">
+            <form action="#" method="#">
+              <div class="name">
+                <label for="name">Name</label>
+                <input
+                  title="at least 8 characters"
+                  required
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Name"
+                />
+              </div>
+              <div class="email">
+                <label for="email">Email</label>
+                <input
+                  title="username@gmail.com"
+                  required
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="password">
+                <label for="password">Password</label>
+                <input
+                  title="at least 8 characters"
+                  required
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                />
+                <i class="fa-solid fa-eye-slash" id="icon"></i>
+              </div>
+              <div class="role">
+                <label for="role">Role</label>
+                <select name="role" id="role">
+                  <option selected value="user">User</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </div>
+              <div class="btn">
+                <a id="signUp" class="SignUp" href="#">signUp</a>
+                <a id="SignIn" class="SignIn" href="../index.html">SignIn</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
